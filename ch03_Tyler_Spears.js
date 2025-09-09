@@ -5,12 +5,12 @@ argument. We can write a function like that ourselves now. Define the function m
 takes two arguments and returns their minimum.
 */
 
-function min(x, y) {
-  if (x < y) {
-    return x;
+function min(a, b) {
+  if (a < b) {
+    return a;
   } 
   else {
-    return y;
+    return b;
   }
 }
 console.log(min(0, 10))
