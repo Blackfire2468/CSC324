@@ -58,13 +58,13 @@ Write a function called countBs that takes a string as its only argument and ret
 Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase B characters). Rewrite countBs to make use of this new function.
 */
 
-function countBs(str) {
-  return countChar(str, 'B');
+function countBs(str) {   //this is the only way i could figure out how to make this function work since we need both countBs and countchar to return the count
+  return countChar(str);
 }
-function countChar(str, Count) {
+function countChar(str, charToCount = 'B') { //if we were just doing countChar then you would only need this function
   let count = 0;
   for (let i = 0; i < str.length; i++) {
-    if (str[i] == Count) {
+    if (str[i] === charToCount) {
       count++;
     }
   }
